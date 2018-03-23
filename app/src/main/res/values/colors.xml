@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorCajasTexto">#c2c2c2</color>
+    <color name="Juego">#FFFFFF</color>
+    <color name="ganadorJuego">#00c100</color>
 </resources>
