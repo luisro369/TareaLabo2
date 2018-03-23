@@ -2,8 +2,11 @@
     <string name="app_name">Tarea Labo 2</string>
     <string name="text1">jugador 1</string>
     <string name="text2">jugador 2</string>
-    <string name="text_button1">Punto jugador 1</string>
-    <string name="text_button2">Puntojugador 2</string>
+    <string name="text_button_player1">Punto jugador 1</string>
+    <string name="text_button_player2">Puntojugador 2</string>
+    <string name="text_contador_player1">Marcador jugador 1</string>
+    <string name="text_contador_player2">Marcador jugador 2</string>
+
 
 
 </resources>
