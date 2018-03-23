@@ -4,9 +4,9 @@
     <string name="text2">jugador 2</string>
     <string name="text_button_player1">Punto jugador 1</string>
     <string name="text_button_player2">Puntojugador 2</string>
-    <string name="text_contador_player1">Marcador jugador 1</string>
-    <string name="text_contador_player2">Marcador jugador 2</string>
-    <string name="set_Id">Set 1</string>
+    <string name="text_contador_player1">0</string>
+    <string name="text_contador_player2">0</string>
+    <string name="juego_Id">juego 1</string>
 
 
 </resources>

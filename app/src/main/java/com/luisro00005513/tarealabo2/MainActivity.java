@@ -1,13 +1,16 @@
 package com.luisro00005513.tarealabo2;
 
+import android.app.Application;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+//===============contador pensado para un set(6 juegos)===============
 public class MainActivity extends AppCompatActivity {
-    int contadorClickBoton1 = 0,contadorClickBoton2 = 0;
+    int contadorClickBoton1 = 0,contadorClickBoton2 = 0,
+            contadorJuegoPlayer1 = 0,contadorJuegoPlayer2 = 0 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }// onCreate class
 
     //======================metodos====================
-    public void darClick(View v){
+    public void darClick(View v) {
         Button buttonIdplayer1, buttonIdplayer2;
         TextView textContadorPlayer1, textContadorPlayer2;
         //------------------------
@@ -25,16 +28,19 @@ public class MainActivity extends AppCompatActivity {
         textContadorPlayer1 = findViewById(R.id.text_contador_player1);
         textContadorPlayer2 = findViewById(R.id.text_contador_player2);
         //------------------------
-        if (v == buttonIdplayer1){
+        if (v == buttonIdplayer1) {
             contadorClickBoton1 += 1;
             textContadorPlayer1.setText(String.valueOf(contadorClickBoton1 * 15));
-
         }//boton1
-        if (v == buttonIdplayer2){
+        if (v == buttonIdplayer2) {
             contadorClickBoton2 += 1;
             textContadorPlayer2.setText(String.valueOf(contadorClickBoton2 * 15));
-
         }//boton2
-
+        if((contadorClickBoton1 > 3) || (contadorClickBoton2 > 3)){
+            contadorClickBoton1 = 0;
+            contadorClickBoton2 = 0;
+        }//if contador juego
     }//darClick
+
 }//main class
+
