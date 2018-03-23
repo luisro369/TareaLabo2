@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 textContadorPlayer2.setText("Deuce");
             }//if de si ambos estan empatados con 45
             //----------------------------------------
-            if(contadorClickBoton1 == 4 & contadorClickBoton2 == 3){
+            if(contadorClickBoton1 == 4 & contadorClickBoton2 >= 3){
                 textContadorPlayer1.setText("advantage");
                 textContadorPlayer2.setText(String.valueOf(contadorClickBoton2 * 15));
 
@@ -61,9 +61,10 @@ public class MainActivity extends AppCompatActivity {
                     textContadorPlayer2.setText(String.valueOf(contadorClickBoton2 * 15));
                 }//si el jugdor 2 mete punto le quita el advantage al jugador 1
             }//si anota un punto mas el jugador1
-            if(contadorClickBoton2 == 4 & contadorClickBoton1 == 3){
+            if(contadorClickBoton2 == 4 & contadorClickBoton1 >= 3){
                 textContadorPlayer2.setText("advantage");
                 textContadorPlayer1.setText(String.valueOf(contadorClickBoton1 * 15));
+
 
                 if(contadorClickBoton1 == 4){
                     contadorClickBoton1 = 3;
@@ -73,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
                     //textContadorPlayer1.setText("advantage");
                 }//si el jugdor 1 mete punto le quita el advantage al jugador 2
             }//si anota un punto mas el jugador1
-            if(contadorClickBoton1 >= 4){
+            if(contadorClickBoton1 > 4){
                 //jugador1.setBackgroundColor(R.color.ganadorJuego);
                 jugador1.setBackgroundResource(R.color.ganadorJuego);
                 contadorJuego1 += 1;
                 resetear(textContadorPlayer1,textContadorPlayer2, jugador1, jugador2);
             }//si gana el juego jugador1
-            if(contadorClickBoton2 >= 4){
+            if(contadorClickBoton2 > 4){
                 //jugador1.setBackgroundColor(R.color.ganadorJuego);
                 jugador2.setBackgroundResource(R.color.ganadorJuego);
                 contadorJuego2 += 1;
