@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
+            <!--=========imagenes de jugadores ==================== -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -38,9 +38,10 @@
                     android:id="@+id/image_id2"/>
 
             </LinearLayout>
+            <!--=========imagenes de jugadores (fin)==================== -->
 
 
-            <!--================ textviews ==============-->
+            <!--================ textviews puntaje==============-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,11 +67,11 @@
                     android:id="@+id/text_id2"
                     />
             </LinearLayout>
-            <!--============ textviews (fin)=============-->
+            <!--============ textviews puntaje(fin)=============-->
 
 
 
-            <!--=============  caja contador 1==============-->
+            <!--=============  caja contadores ==============-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,7 +97,7 @@
                     android:id="@+id/text_contador_player2"/>
 
             </LinearLayout>
-            <!--=============  caja contador 2 (fin)==========-->
+            <!--=============  caja contadores (fin)==========-->
 
 
             <!--=============  botones ===================-->
@@ -126,6 +127,7 @@
             </LinearLayout>
             <!--================= botones (fin) ============-->
 
+            <!--=========contador de juego==================== -->
             <TextView
                 android:paddingTop="20dp"
                 android:layout_width="match_parent"
@@ -135,6 +137,8 @@
                 android:text="@string/juego_Id"
                 android:id="@+id/juegoId"
                 />
+            <!--=========contador de juego (fin)==================== -->
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
