@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 //===============contador pensado para un set(6 juegos)===============
 public class MainActivity extends AppCompatActivity {
-    int contadorClickBoton1 = 0,contadorClickBoton2 = 0, contadorJuego1 = 0, contadorJuego2 = 0;
+    int contadorClickBoton1 = 0,contadorClickBoton2 = 0, contadorJuego = 1,contadorJuego1 = 1, contadorJuego2 = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +21,10 @@ public class MainActivity extends AppCompatActivity {
     //===============================metodo dar click ===============================================
     public void darClick(View v) {
         Button buttonIdplayer1, buttonIdplayer2;
-        TextView textContadorPlayer1, textContadorPlayer2;
+        TextView textContadorPlayer1, textContadorPlayer2, juego;
         ImageView jugador1, jugador2;
         //------------------------
+        juego = findViewById(R.id.juegoId);
         jugador1 = findViewById(R.id.image_id1);
         jugador2 = findViewById(R.id.image_id2);
 
@@ -38,11 +39,15 @@ public class MainActivity extends AppCompatActivity {
         //------------------------
         if (v == buttonIdplayer1) {
             contadorClickBoton1 += 1;
-            textContadorPlayer1.setText(String.valueOf(contadorClickBoton1 * 15));
+            if(contadorClickBoton1 < 4) {
+                textContadorPlayer1.setText(String.valueOf(contadorClickBoton1 * 15));
+            }
         }//boton1
         if (v == buttonIdplayer2) {
             contadorClickBoton2 += 1;
-            textContadorPlayer2.setText(String.valueOf(contadorClickBoton2 * 15));
+            if(contadorClickBoton2 < 4) {
+                textContadorPlayer2.setText(String.valueOf(contadorClickBoton2 * 15));
+            }
         }//boton2
         if((contadorClickBoton1 >= 3) || (contadorClickBoton2 >= 3)){
             if((contadorClickBoton1 & contadorClickBoton2) == 3){
@@ -77,12 +82,16 @@ public class MainActivity extends AppCompatActivity {
             if(contadorClickBoton1 > 4){
                 //jugador1.setBackgroundColor(R.color.ganadorJuego);
                 jugador1.setBackgroundResource(R.color.ganadorJuego);
+                contadorJuego += 1;
+                juego.setText("juego " + String.valueOf(contadorJuego));
                 contadorJuego1 += 1;
                 resetear(textContadorPlayer1,textContadorPlayer2, jugador1, jugador2);
             }//si gana el juego jugador1
             if(contadorClickBoton2 > 4){
                 //jugador1.setBackgroundColor(R.color.ganadorJuego);
                 jugador2.setBackgroundResource(R.color.ganadorJuego);
+                contadorJuego += 1;
+                juego.setText("juego " + String.valueOf(contadorJuego));
                 contadorJuego2 += 1;
                 resetear(textContadorPlayer1,textContadorPlayer2,jugador1, jugador2);
             }//si gana el juego jugador1
