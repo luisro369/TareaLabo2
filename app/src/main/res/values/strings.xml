@@ -6,7 +6,7 @@
     <string name="text_button_player2">Puntojugador 2</string>
     <string name="text_contador_player1">Marcador jugador 1</string>
     <string name="text_contador_player2">Marcador jugador 2</string>
-
+    <string name="set_Id">Set 1</string>
 
 
 </resources>
