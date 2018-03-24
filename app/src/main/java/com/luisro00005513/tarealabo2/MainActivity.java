@@ -105,22 +105,16 @@ public class MainActivity extends AppCompatActivity {
             }//if contador click
         }//contadorJuego
         else{
-            if((contadorJuego1 - contadorJuego2 == 2) || (contadorJuego2 - contadorJuego1 == 2)){
-                contadorJuego = 0;
-                juego.setText("juego " + String.valueOf(contadorJuego));
-                if((contadorJuego1 >= 4) & (contadorJuego1 > contadorJuego2)){
-                    textGanador.setText("Jugador 1 gana!!!");
-                }//si gana el jugador 1
-                if((contadorJuego2 >= 4) & (contadorJuego2 > contadorJuego1)){
-                    textGanador.setText("Jugador 2 gana!!!");
-                }//si gana el jugador 1
-                buttonGanador.setBackgroundResource(R.color.ganadorJuego);
-                buttonGanador.setText("Volver a jugar?");
-                resetear(textContadorPlayer1,textContadorPlayer2,jugador1, jugador2);
-            }//si la diferencia entre ambos es 2
-            else{
-                contadorJuego = 5;
-            }
+            juego.setText("juego " + String.valueOf(contadorJuego));
+            if((contadorJuego1 >= 4) & (contadorJuego1 > contadorJuego2)){
+                textGanador.setText("Jugador 1 gana!!!");
+            }//si gana el jugador 1
+            if((contadorJuego2 >= 4) & (contadorJuego2 > contadorJuego1)){
+                textGanador.setText("Jugador 2 gana!!!");
+            }//si gana el jugador 1
+            buttonGanador.setBackgroundResource(R.color.ganadorJuego);
+            buttonGanador.setText("Volver a jugar?");
+            resetear(textContadorPlayer1,textContadorPlayer2,jugador1, jugador2);
         }// define quien es el ganador, en 1 set cada jugador por lo menos tiene que ganar 4 partidas
     }//darClick
     //===============================metodo dar click (fin)===============================================
