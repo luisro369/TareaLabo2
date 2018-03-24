@@ -7,6 +7,8 @@
     <string name="text_contador_player1">0</string>
     <string name="text_contador_player2">0</string>
     <string name="juego_Id">juego 1</string>
+    <string name="nombrar_ganador"></string>
+    <string name="boton_ganador"></string>
 
 
 </resources>

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/Juego"
     tools:context="com.luisro00005513.tarealabo2.MainActivity">
 
     <ScrollView
@@ -138,6 +139,35 @@
                 android:id="@+id/juegoId"
                 />
             <!--=========contador de juego (fin)==================== -->
+
+            <!--=========nombrar ganador ==================== -->
+            <TextView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                android:text="@string/nombrar_ganador"
+                android:id="@+id/nombrarGanador"
+                />
+            <!--=========nombrar ganador (fin)==================== -->
+
+            <!--=========boton Ganador ==================== -->
+            <Button
+                android:onClick="darClick"
+                android:background="@color/Juego"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_ganador"
+                android:id="@+id/botonGanador"
+                />
+
+            <!--=========boton Ganador (fin)==================== -->
+
+
+
+
 
         </LinearLayout>
     </ScrollView>
