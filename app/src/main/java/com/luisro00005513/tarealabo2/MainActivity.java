@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             }//if contador click
         }//contadorJuego
         else{
+            contadorJuego = 0;
             juego.setText("juego " + String.valueOf(contadorJuego));
             if((contadorJuego1 >= 4) & (contadorJuego1 > contadorJuego2)){
                 textGanador.setText("Jugador 1 gana!!!");
