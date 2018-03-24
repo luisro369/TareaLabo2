@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }// onCreate class
 
-    //===============================Metodo dar click ===============================================
+    //===============================Metodo dar Click ===============================================
     public void darClick(View v) {
         Button buttonIdplayer1, buttonIdplayer2, buttonGanador;
         TextView textContadorPlayer1, textContadorPlayer2, juego, textGanador;
