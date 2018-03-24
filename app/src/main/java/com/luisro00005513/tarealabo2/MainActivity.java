@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 //===============contador pensado para un set(6 juegos)===============
 public class MainActivity extends AppCompatActivity {
-    int contadorClickBoton1 = 0,contadorClickBoton2 = 0, contadorJuego = 0,contadorJuego1 = 0, contadorJuego2 = 0;
+    int contadorClickBoton1 = 0,contadorClickBoton2 = 0, contadorJuego = 1,contadorJuego1 = 0, contadorJuego2 = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 textContadorPlayer2.setText(String.valueOf(contadorClickBoton2 * 15));
             }
         }//boton2
-        if(contadorJuego < 6){
+        if(contadorJuego <= 6){
             if((contadorClickBoton1 >= 3) || (contadorClickBoton2 >= 3)){
                 if((contadorClickBoton1 & contadorClickBoton2) == 3){
                     textContadorPlayer1.setText("Deuce");
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             }//if contador click
         }//contadorJuego
         else{
-            contadorJuego = 0;
+            contadorJuego = 1;
             juego.setText("juego " + String.valueOf(contadorJuego));
             if((contadorJuego1 >= 4) & (contadorJuego1 > contadorJuego2)){
                 textGanador.setText("Jugador 1 gana!!!");
